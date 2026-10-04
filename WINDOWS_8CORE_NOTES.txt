@@ -1,0 +1,17 @@
+Windows 8-core patch
+====================
+
+Changes:
+1. Windows parallel execution now uses a PSOCK cluster via parallel::makeCluster/parLapply.
+2. The PSOCK cluster is kept alive for an entire checkpoint_mc() call to avoid recreating workers for every batch.
+3. config.R caps the default worker count at 8.
+4. Linux/macOS behavior remains unchanged (mclapply for n_cores > 1).
+
+Run from the project directory in R/RStudio:
+  source("run_all.R")
+
+For a quick test first:
+  source("scripts/99_smoke_test.R")
+  run_smoke_test()
+
+Note: This patch was statically reviewed in the current environment, but R is not installed here, so it could not be runtime-tested.

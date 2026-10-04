@@ -1,0 +1,17 @@
+README.md                       Usage and final simulation design
+config.R                        Global Monte Carlo and optimiser controls
+run_all.R                       Runs the four Monte Carlo studies
+R/00_utils.R                    Numerical, parallel and checkpoint helpers
+R/01_model.R                    Gaussian model, parameterisation and classification
+R/02_missingness.R              Entropy mechanism, xi0 calibration and data generation
+R/03_likelihoods.R              PC, recorded mixed, MAR, latent mixed and oracle likelihoods
+R/04_fitters.R                  Direct nlminb fitters for every estimator
+R/05_metrics.R                  Parameter, classification and composite-curve metrics
+R/06_theory_are.R               Optional numerical leading-order ARE calculation
+R/07_sim_helpers.R              Configuration grids and study summaries
+scripts/01_parameter_recovery.R Section 5.2 simulation
+scripts/02_efficiency.R         Section 5.3 simulation
+scripts/03_fixed_missingness.R  Section 5.4 simulation
+scripts/04_latent_robustness.R  Section 5.5 simulation
+scripts/05_theory_are.R         Optional theoretical ARE grid
+scripts/99_smoke_test.R         Small end-to-end code-path check
